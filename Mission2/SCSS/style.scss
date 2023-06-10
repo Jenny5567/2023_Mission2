@@ -1,0 +1,664 @@
+/* CSS reset */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+  background: #000;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+.AItool{
+  a{
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+  }
+}
+
+
+.application a{
+  color: #000;
+  text-decoration: none;
+  display: inline-block;
+}
+
+/* 自動依照比例縮放 */
+img{
+  max-width:100%;
+	height: auto;
+}
+
+/* 全部變borderbox */
+*, *::before ,*::after{
+    box-sizing: border-box;
+}
+
+a:hover {
+  opacity: 0.8;
+}
+
+
+// 統一格式
+
+.d-flex{
+  display: flex;
+}
+
+.flex-d-c{
+  flex-direction: column;
+}
+
+.h1{
+  font-size: 120px;
+  font-weight: 900;
+  line-height: 1.2;
+}
+
+.fz-80{
+  font-size: 80px;
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+.h2{
+  font-size: 48px;
+  font-weight: 900;
+  line-height: 1.2;
+}
+
+.h3{
+  font-size: 32px;
+  font-weight: 900;
+  line-height: 1.2;
+}
+
+.h4{
+  font-size: 16px;
+  line-height: 24px;
+}
+
+
+.linear{
+  background: (to right, black, white);
+}
+
+.mb-20{
+  margin-bottom: 20px;
+}
+
+
+
+
+//其他
+
+body {
+  font-family: 'Noto Sans TC', sans-serif;
+  width: 100%;
+}
+
+.AItool , .footer{
+  background: #000;
+  color:#fff;
+}
+
+.container{
+  max-width: 1296px;
+  margin: 0 auto;
+  padding: 60px;
+}
+
+header{
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px rgb(205, 197, 197) solid;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.logo{
+  width: 245px;
+}
+
+.nav-list li{
+  margin: 10px;
+}
+
+
+.nav-btn{
+  display: none;
+}
+
+.nav-collapse{
+  display: none;
+  position: absolute;
+  top:100%;
+  width: 100%;
+  min-height: calc(100vh - 81px); /* 佔滿整個瀏覽器高度扣掉 navbar 高度 */;
+  background: #000;
+}
+
+.nav-collapse a {
+  font-size: 80px;
+  line-height: 1.2;
+  margin: 4px 0;
+}
+
+@media (max-width: 768px) {
+  
+  .nav-list{
+    display: none;
+  }
+
+  .nav-btn{
+    display: block;
+  }
+
+  .nav-collapse{
+    border-top: 1px white solid;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .nav-collapse-show{
+    display: flex;
+  }
+}
+
+
+
+.banner{
+  margin-bottom: 5rem;
+}
+
+@media (max-width: 768px) {
+  .h1{
+    font-size: 48px;
+  }
+  .m-column{
+    flex-direction: column;
+    gap:24px;
+  }
+}
+
+.start{
+  font-weight: 900;
+  padding: 1rem 1.75rem ;
+  border: 1px solid white;
+  font-size: 20px;
+  border-radius: 1rem;
+  margin-top: 60px;
+}
+
+
+.motion {
+	display: flex;
+	justify-content: flex-end;
+	overflow: hidden;
+}
+
+.motion img {
+	position: relative;
+
+}
+
+.motion1 {
+	animation: 5s ease-in-out infinite 3s;
+	animation-name: motion;
+}
+
+.motion2 {
+	animation: 5s ease-in-out infinite 2s;
+	animation-name: motion;
+}
+
+.motion3 {
+	animation: 5s ease-in-out infinite 1s;
+	animation-name: motion;
+}
+
+// 讓圖從下方冒出來
+@keyframes motion {
+	0% {
+		top: 0px;
+	}
+
+	30% {
+		top: -200px;
+	}
+
+	40% {
+		left: 600px;
+	}
+
+	50% {
+		top: 400px;
+	}
+
+	80% {
+		top: 0px;
+	}
+}
+
+.service{
+  justify-content: space-between;
+  margin-top: 180px;
+  margin-bottom: 80px;
+  h4{
+    width: 66%;
+  }
+}
+
+
+.features {
+  justify-content: space-between;
+  margin-bottom: 80px;
+  li{
+    width: 32%;
+    padding: 80px 40px;
+    border: #525252 1px solid;
+    border-radius: 5%;
+    line-height: 24px;
+    img,p{
+      margin-bottom: 20px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .features li{
+    width: 100%;
+  }
+}
+
+.partners{
+  margin-bottom: 160px;
+  img{ //固定寬高
+    width: 160px;
+    height: 40px;
+    max-width: initial;
+  }
+}
+
+.partner1 , .partner2{ //縮小時可左右滾動
+  overflow-x: auto;
+}
+
+.partner2{ //向右位移
+  transform: translateX(50px); 
+}
+
+
+.partner1::before{
+    content: " ";
+    width: 190px;
+    height: 100px;
+    position: absolute;
+    background: linear-gradient(to right, #020202 20%, transparent 80%);
+}
+
+.partner1::after{
+  content: " ";
+  width: 190px;
+  height: 100px;
+  position: absolute;
+  right: 70px;
+  background: linear-gradient(to left, #020202 20%, transparent 80%);
+}
+
+
+
+
+
+.card{
+  display: flex;
+  flex-direction: column;
+  padding: 80px 40px;
+  border: #525252 1px solid;
+  border-radius: 16px;
+  line-height: 24px;
+  background: rgba(255, 255, 255, 0.08);
+  img{
+    height: 100%;
+    margin-right: 5px;
+  }
+}
+
+
+.swiper {
+  padding-bottom: 36px; /*要算上高度分頁條的高度，因此為24(與分頁條距離)+12(分頁條高度)=36*/
+}
+
+.swiper-pagination{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  bottom: 0px; /*元素底部邊緣與區塊底部的距離*/
+}
+
+.swiper-pagination-bullet {
+  background-color: #525252;
+  opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+  width: 15px;
+  height: 15px;
+  background-color: #ffffff;
+}
+
+
+
+.application{
+  border-radius: 100px;
+  background: #fff;
+  padding: 50px 0;
+  h2{
+    text-align: left;
+    margin-bottom: 80px;
+  }
+}
+
+.search{
+  background: #F2F2F2;
+  padding: 20px 90px;
+  width: 100%;
+  border: none;
+  border-radius: 10px;
+  background-image: url(https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/2023web-camp/icons/search.png);
+  background-repeat: no-repeat;
+  background-position:  5% center ; // 離左邊20px 上下置中
+  background-size:20px;
+  margin-bottom: 36px;
+}
+
+.classify{
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 60px;
+  .classify-btns{
+    gap: 10px;
+  }
+  @media (max-width:850px){
+    .classify-btns{
+      margin-top: 24px;
+      order:3;
+      justify-content: space-between;
+      width: 100%;
+    }
+  }
+  .classify-btn{
+    padding: 15px 10px;
+    border-radius: 16px;
+  }
+  ul li:hover{
+    background: #F2F2F2;
+    
+  }
+  .material-icons{
+    font-size: 16px;
+  }
+
+}
+
+.filter , .sort{
+  padding: 20px 25px;
+  border: 1px rgb(205, 197, 197) solid;
+  border-radius: 16px;
+}
+
+.sort{
+  background: #fff;
+  font-size: 16px;
+}
+
+.classify{
+  position: relative;
+}
+
+.dropdown-menu{
+  display: none;
+  position: absolute;
+  right: 0;
+  top:65px;
+  background: #fff;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.15);
+            // 右  下  擴散  顏色
+  padding: 20px 0;
+  border: 1px rgb(205, 197, 197) solid;
+  border-radius: 16px;
+
+  li a{
+    padding: 10px 40px;
+  }
+}
+
+.show{
+  display: block;
+}
+
+// tools
+
+.tools {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.tool-list {
+  width: 29%;
+  margin: 20px;
+  border: 1px solid #f2f2f2;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  h2 {
+    font-size: 20px;
+    font-weight: bold;
+    padding: 12px 0 20px 0;
+  }
+  .picture {
+    overflow: hidden;
+    img {
+      width: 100%;
+      border-radius: 5% 5% 0 0;
+      transition: 0.5s;
+      cursor: pointer;
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+  }
+  p {
+    padding: 0 0 10px 0;
+    line-height: 1.5;
+  }
+}
+
+@media (max-width:1100px){
+  .tool-list{
+    width: 43%;
+  }
+}
+
+
+@media (max-width:768px){
+  .tool-list{
+    width: 100%;
+  }
+}
+
+
+
+
+.top {
+  border-bottom: 1px solid #f2f2f2;
+  padding: 20px;
+  flex-grow: 1; //剩餘空間都分配給top
+}
+
+  .AI {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    border-bottom: 1px solid #f2f2f2;
+  }
+  .chat {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    border-bottom: 1px solid #f2f2f2;
+  }
+
+
+
+
+.page-number{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-right: 10px;
+  li{
+    padding: 16px;
+    margin-right: 4px;
+    border-radius: 16px;
+    gap: 4px;
+    font-weight: bold;
+    border: 1px #fff solid;
+    &:hover{
+    border: 1px rgb(205, 197, 197) solid;
+    background: #000;
+    color: #fff;
+    }
+  }
+  .icon{
+    padding: 10px;
+  }
+}
+
+
+// 第三部分 footer
+.create{
+  padding: 80px 0;
+  justify-content: center;
+  color: white;
+  a {
+    text-decoration: none;
+    color: white;
+  }
+  .start-button{
+    margin-bottom: 0;
+    flex-shrink: 0;
+  }
+}
+
+.create-start{
+  align-items: center;
+  justify-content: center;
+  h2{
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  .start-button{
+    .arrow{
+      position: relative;
+      top: 5px;
+    }
+  }
+}
+
+
+.footer-logo{
+  padding:50px 0;
+  margin-top: 150px;
+  border-top:1px #fff solid;
+  border-bottom: 1px #fff solid;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  .footer-logo-AI{
+    width: 245px;
+  }
+}
+
+@media(max-width:768px){
+  .footer-logo{
+    flex-direction: column;
+  }
+  .tag{
+    order:2;
+    margin-top: 16px;
+    h2{
+      font-size: 48px;
+    }
+
+  }
+  .footer-logo-AI{
+    width: 100%;
+  }
+}
+
+
+footer{
+  margin-top: 50px;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 150%;
+  .bottom-topic{
+    margin-right: 100px;
+  }
+  ul {
+    width: 70%;
+    li{
+      margin-right: 10px;
+    }
+  }
+}
+
+@media(max-width:768px){
+  footer{
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .social{
+    width: 100%;  
+    order:3;
+    margin-top: 36px;
+  }
+}
+
